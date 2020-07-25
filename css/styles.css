@@ -677,13 +677,15 @@ footer div.section{
     }
 
     .logo-and-contact{
-        margin-right: 70px;
+        margin-right: 69px;
+        width: 231px;
     }
 
     .logo-and-contact .logo,
     .join b,
     .subscribe b{
         display: block;
+        margin-right: 0;
         margin-bottom: 20px;
     }
 
@@ -700,13 +702,75 @@ footer div.section{
 
     .addres-footer ul li{
         margin-bottom: 9px;
+        line-height: 1.7;
+        font-size: 14px; 
     }
 
     .addres-footer ul li a{
         font-family: var(--main-font-family);
         font-style: normal;
         font-weight: 400;
-        line-height: 1.7;
-        font-size: 14px;
         color: var(--address-footer-a-color);
+    }
+    
+    .subscribe{
+        width: 570px;
+        
+    }
+
+    .footer-subscribe{
+        position: relative;
+    }
+
+    .footer-subscribe input,
+    .footer-subscribe button{
+        height: 50px;
+        border-radius: 4px;
+    }
+    .footer-subscribe input{
+        width: 358px;
+        padding-left: 15px;
+        color: var(--main-font-on-dark-fon-color);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+        background-color: var(--footer-bg-color);
+    }
+
+    .footer-subscribe label{
+        position: absolute;
+        left: 16px;
+        top: 50%;
+        transform: translateY(-50%)
+    }
+
+    #subscribe-email:focus + label[for="subscribe-email"],
+    #subscribe-email:not(:placeholder-shown) + label[for="subscribe-email"]{
+        opacity: 0;
+    }
+
+    .footer-subscribe button{
+        width: 200px;
+        margin-left: 12px;
+        color: var(--main-font-on-dark-fon-color);
+        background-color: var(--main-hover-color);
+        border: none;
+        font-size: 16px;
+        letter-spacing: 0.06em;
+        font-weight: 600;
+    }
+        .footer-subscribe button:after{
+            content: "";
+            margin-left: 10px;
+            width: 24px;
+            height: 24px;
+
+            background-image: url("../images/icon-send.svg");
+            background-repeat: no-repeat;
+            background-size: 24px;
+            background-position: center;
+        }
+
+    .footer-subscribe .flex-container{
+        justify-content: center;
+        align-items: center;
     }
