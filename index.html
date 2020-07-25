@@ -361,12 +361,44 @@
             <div class="subscribe">
                 <b>ПОДПИШИТЕСЬ НА РАССЫЛКУ</b>
                 <form action="" method="post" class="footer-subscribe flex-container">
-                    <input type="email" id="subscribe-email" placeholder=" " />
-                    <label for="subscribe-email">E-mail</label>
+                    <input type="email" id="subscribe-email" name="footer-email" placeholder=" " />
+                    <label for="subscribe-email" class="footer-subscribe-label">E-mail</label>
                     <button type="submit" class="footer-subscribe flex-container">Подписатья</button>
                 </form>
             </div>
         </div>
     </footer>
+    <div class="backdrob">
+        <div class="modal-window flex-container">
+            <button class="close-modal"></button>
+            <form action="" method="post" class="modal-window-form flex-container">
+                <b class="modal-header">Оставьте свои данные, мы вам перезвоним</b>
+                
+                <div class="form-field">
+                    <input type="text" id="id-customer-name" name="customer-name" placeholder=" " />
+                    <label for="id-customer-name" class="modal-label">Имя</label>
+                </div>
+                <div class="form-field">
+                    <input type="tel" id="id-customer-tel" name="customer-tel" placeholder=" " />
+                    <label for="id-customer-tel" class="modal-label">Телефон</label>
+                </div>
+                <div class="form-field">
+                    <input type="email" id="id-customer-email" name="customer-email" placeholder=" " />
+                    <label for="id-customer-email" class="modal-label">Почта</label>
+                </div>
+                <div class="form-field">
+                    <textarea name="comment" id="id-customer-comment" placeholder=" " cols="30" rows="10"></textarea>
+                    <label for="id-customer-email" class="modal-label comment">Комментарий</label>
+                </div>
+                <div class="form-field">
+                    <input type="checkbox" id="id-agreement" name="agreement"><label for="id-agreement" class="">
+                        Соглашаюсь с рассылкой и принимаю 
+                        <a href="#">Условия договора</a>
+                    </label>
+                </div>
+                <button type="submit" class="modal-button-send">Отправить</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>

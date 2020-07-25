@@ -12,7 +12,9 @@
     --what-we-do-card-header-bg-color: rgba(70, 73, 109, 0.8);
     --portfolio-card-hover-bg: rgba(33, 150, 243, 0.9);
     --footer-bg-color: #2F303A;
+    --backdrop-bg-color: rgba(0, 0, 0, 0.2);
     --social-links :rgba(255, 255, 255, 0.1);
+    --modal-window-bg-color: #ffffff;
 
     --header-border-color: #ECECEC;
     --clients-border-color: #AFB1B8;
@@ -36,6 +38,11 @@
         0px 1px 1px rgba(0, 0, 0, 0.12);
 
     --hero-button-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    
+    --modal-window-shadow:
+        0px 2px 1px rgba(0, 0, 0, 0.2),
+        0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 1px 3px rgba(0, 0, 0, 0.12);
 
     --hero-gradient-1: rgba(47, 48, 58, 0.8);
     --hero-gradient-2: rgba(47, 48, 58, 0.8);
@@ -532,7 +539,7 @@ header div.section{
     }
 
 
-/*in section portfolio ===================== portfolio.html ================================================*/    
+/*in section portfolio ===================== portfolio.html ================================================*/
     .btn-group{
         margin-bottom: 50px;
         text-align: center;
@@ -732,7 +739,7 @@ footer div.section{
         padding-left: 15px;
         color: var(--main-font-on-dark-fon-color);
         border: 1px solid rgba(255, 255, 255, 0.3);
-        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+        filter: drop-shadow (0px 4px 4px rgba(0, 0, 0, 0.15));
         background-color: var(--footer-bg-color);
     }
 
@@ -743,9 +750,13 @@ footer div.section{
         transform: translateY(-50%)
     }
 
-    #subscribe-email:focus + label[for="subscribe-email"],
-    #subscribe-email:not(:placeholder-shown) + label[for="subscribe-email"]{
+    #subscribe-email:focus + .footer-subscribe-label,
+    #subscribe-email:not(:placeholder-shown) + .footer-subscribe-label{
         opacity: 0;
+    }
+
+    .footer-subscribe-label{
+        color: var(--secondary-font-color);
     }
 
     .footer-subscribe button{
@@ -763,7 +774,6 @@ footer div.section{
             margin-left: 10px;
             width: 24px;
             height: 24px;
-
             background-image: url("../images/icon-send.svg");
             background-repeat: no-repeat;
             background-size: 24px;
@@ -774,3 +784,68 @@ footer div.section{
         justify-content: center;
         align-items: center;
     }
+/*===================== modal ================================================*/
+.backdrob{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--backdrop-bg-color);
+}
+
+    .modal-window{
+        position: relative;
+        width: 528px;
+        height: 581px;
+        margin: 0 auto;
+        padding: 40px;
+        transform: translateY(50%);
+        background-color: var(--modal-window-bg-color);
+        box-shadow: var(--modal-window-shadow);
+        border-radius: 4px;
+    }
+        .close-modal{
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            width: 30px;
+            height: 30px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            background-image: url(../images/close-black-18dp.svg);
+            background-color: var(--modal-window-bg-color);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 18px;
+        }
+
+        .modal-header{
+            display: block;
+            margin: 0 auto 30px auto;
+            font-size: 20px;
+            line-height: 23px;
+        }
+    
+        .modal-window-form input:not(#id-agreement){
+            width: 448px;
+            height: 40px;
+        }
+
+        .modal-window textarea{
+            width: 448px;
+        }
+
+        .form-field{
+            position: relative;
+            margin: 0 auto;
+            align-items: center;
+        }
+        .modal-label{
+            position: absolute;
+            top: 12px;
+            left: 42px;
+        }
+            .comment{
+                left: 16px;
+            }
