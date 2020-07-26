@@ -321,7 +321,7 @@ header div.section{
     }
 
     .benefits-list li h3{
-        margin: 0;
+        margin-bottom: 10px;
     }
 
         .benefits-list li h3::before{
@@ -467,7 +467,6 @@ header div.section{
 
         .social li a{
             display: block;
-            border-radius: 50%;
         }
 
         .social .link-icon{
@@ -561,6 +560,7 @@ header div.section{
             border: none;
             box-shadow: var(--portfolio-button-shadow);
             border-radius: 4px;
+            outline: none;
         }
 
         .btn-group button:hover,
@@ -583,12 +583,16 @@ header div.section{
             padding-bottom: 20px;
             overflow: hidden;
         }
-
-        .ul-portfolio li a div{
-            position: relative;
-            overflow: hidden;
-            margin-bottom: 20px;
+        
+        .ul-portfolio li a{
+            outline: none;
         }
+            .ul-portfolio li a div{
+                position: relative;
+                overflow: hidden;
+                margin-bottom: 20px;
+            }
+
 
         .hover-text{
             position: absolute;
@@ -612,8 +616,7 @@ header div.section{
         }
 
         .ul-portfolio li:hover,
-        .ul-portfolio li:focus{
-            box-sizing: border-box;
+        .ul-portfolio li:focus-within{
             box-shadow: var(--portfolio-card-shadow);
         }
 
@@ -722,33 +725,37 @@ footer div.section{
     
     .subscribe{
         width: 570px;
-        
     }
 
-    .footer-subscribe{
-        position: relative;
-    }
+        .footer-subscribe{
+            position: relative;
+        }
 
-    .footer-subscribe input,
-    .footer-subscribe button{
-        height: 50px;
-        border-radius: 4px;
-    }
-    .footer-subscribe input{
-        width: 358px;
-        padding-left: 15px;
-        color: var(--main-font-on-dark-fon-color);
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        filter: drop-shadow (0px 4px 4px rgba(0, 0, 0, 0.15));
-        background-color: var(--footer-bg-color);
-    }
+        .footer-subscribe.flex-container{
+            align-items: center;
+        }
 
-    .footer-subscribe label{
-        position: absolute;
-        left: 16px;
-        top: 50%;
-        transform: translateY(-50%)
-    }
+            .footer-input,
+            .footer-subscribe-button{
+                height: 50px;
+                border-radius: 4px;
+            }
+
+            .footer-input{
+                width: 358px;
+                padding-left: 15px;
+                color: var(--main-font-on-dark-fon-color);
+                border: 1px solid rgba(255, 255, 255, 0.3);
+                filter: drop-shadow (0px 4px 4px rgba(0, 0, 0, 0.15));
+                background-color: var(--footer-bg-color);
+            }
+
+                .footer-subscribe-label{
+                    position: absolute;
+                    left: 16px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
 
     #subscribe-email:focus + .footer-subscribe-label,
     #subscribe-email:not(:placeholder-shown) + .footer-subscribe-label{
@@ -759,7 +766,7 @@ footer div.section{
         color: var(--secondary-font-color);
     }
 
-    .footer-subscribe button{
+    .footer-subscribe-button{
         width: 200px;
         margin-left: 12px;
         color: var(--main-font-on-dark-fon-color);
@@ -769,7 +776,7 @@ footer div.section{
         letter-spacing: 0.06em;
         font-weight: 600;
     }
-        .footer-subscribe button:after{
+        .footer-subscribe-button:after{
             content: "";
             margin-left: 10px;
             width: 24px;
@@ -785,13 +792,14 @@ footer div.section{
         align-items: center;
     }
 /*===================== modal ================================================*/
-.backdrob{
+.backdrop{
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: var(--backdrop-bg-color);
+    transition-duration: var(--transition-duration-time);
 }
 
     .modal-window{
@@ -804,21 +812,45 @@ footer div.section{
         background-color: var(--modal-window-bg-color);
         box-shadow: var(--modal-window-shadow);
         border-radius: 4px;
+        transition-duration: var(--transition-duration-time);
+        font-size: 14px;
     }
+
+    .backdrop.is-hidden{
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+        transform: scale(1.5);
+    }
+
+    .modal-window label{
+        color: var(--secondary-font-color);
+        cursor: pointer;
+    }
+
+    .modal-window svg{
+        cursor: pointer;
+    }
+    
         .close-modal{
             position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             top: 8px;
             right: 8px;
             width: 30px;
             height: 30px;
             border: 1px solid rgba(0, 0, 0, 0.1);
             border-radius: 50%;
-            background-image: url(../images/close-black-18dp.svg);
             background-color: var(--modal-window-bg-color);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: 18px;
+            cursor: pointer;
         }
+
+            .close-modal:hover,
+            .close-modal:focus{
+                fill: var(--main-hover-color);
+            }
 
         .modal-header{
             display: block;
@@ -826,26 +858,123 @@ footer div.section{
             font-size: 20px;
             line-height: 23px;
         }
-    
-        .modal-window-form input:not(#id-agreement){
-            width: 448px;
-            height: 40px;
-        }
-
-        .modal-window textarea{
-            width: 448px;
-        }
 
         .form-field{
             position: relative;
             margin: 0 auto;
             align-items: center;
         }
+    
+        .modal-window-form input:not(#id-agreement){
+            width: 448px;
+            height: 40px;
+            margin-bottom: 28px;
+            padding-left: 42px;
+            box-sizing: border-box;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #id-agreement{
+            cursor: pointer;
+        }
+
+        .modal-input{
+            border: 1px solid rgba(33, 33, 33, 0.2);
+        }
+
+        .text{
+            width: 448px;
+            height: 120px;
+            padding: 12px 16px;
+            border: 1px solid rgba(33, 33, 33, 0.2);
+            box-sizing: border-box;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .form-field .link-terms{
+            position: relative;
+            color: var(--main-hover-color);
+        }
+
+        .form-field .link-terms::after{
+            content: "";
+            position: absolute;
+            width: 100%;
+            bottom:6px;
+            left: 0;
+            display: block;
+            height: 1px;
+            background-color: var(--main-hover-color);
+        }
+        .form-field .link-terms:hover::after{
+            opacity: 0;
+        }
+
+        .svg-for-input{
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            left: 16px; 
+            top: 11px;
+        }
+
+        .svg-for-input.email{
+            top: 12px;
+        }
+
         .modal-label{
             position: absolute;
-            top: 12px;
+            top: 13px;
             left: 42px;
         }
+
+        
+        .modal-input:focus + .modal-label,
+        .modal-input:not(:placeholder-shown) + .modal-label{
+            top:-18px;
+            left:16px;
+            transition-duration: var(--transition-duration-time);
+            color: var(--main-hover-color);
+        }
+
+        .modal-input:focus,
+        .text:focus{
+            outline: none;
+            border: 1px solid var(--main-hover-color);
+        }
+        
+        .modal-input:focus ~ .svg-for-input{
+            fill: var(--main-hover-color);
+        }
+
             .comment{
                 left: 16px;
             }
+
+        .label-agreement{
+            display: inline-flex;
+            font-size: 14px;
+            line-height: 24px;
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+
+        .modal-button-send{
+            width: 200px;
+            height: 50px;
+            margin: 0 auto;
+            color: var(--main-font-on-dark-fon-color);
+            border: none;
+            font-size: 16px;
+            letter-spacing: 0.06em;
+            font-weight: 600;
+            background-color: var(--main-hover-color);
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+            border-radius: 4px;
+            cursor: pointer;
+        }
