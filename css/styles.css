@@ -274,7 +274,7 @@ header div.section{
         font-style: normal;
         font-weight: 900;
         font-size: 44px;
-        line-height: 1.36;
+        line-height: 1.36em;
         text-align: center;
         letter-spacing: 0.06em;
         text-transform: uppercase;
@@ -282,7 +282,7 @@ header div.section{
 
     .hero button{
         padding: 10px 32px;
-        line-height: 1.9;
+        line-height: 1.9em;
         background-color: var(--main-hover-color);
         font-family: var(--main-font-family);
         color: var(--secondary-bg-color);
@@ -300,7 +300,7 @@ header div.section{
 
 .section-title{
     font-size: 36px;
-    line-height: 1.17;
+    line-height: 1.17em;
 }
 
 
@@ -367,7 +367,7 @@ header div.section{
             font-style: normal;
             font-weight: 400;
             font-size: 14px;
-            line-height: 1.7;
+            line-height: 1.7em;
             color: var(--secondary-font-color);
         }
 
@@ -562,7 +562,7 @@ header div.section{
         .btn-group button{
             padding: 6px 22px;
             font-size: 16px;
-            line-height: 1.6;
+            line-height: 1.6em;
             background-color: var(--secondary-bg-color);
             font-family: var(--main-font-family);
             font-weight: 700;
@@ -613,7 +613,7 @@ header div.section{
             color: var(--main-font-on-dark-fon-color);
             font-weight: 400;
             font-size: 18px;
-            line-height: 28px;
+            line-height: 1.556em;
             top: 100%;
             transition-property: top;
             transition-duration: var(--transition-duration-time); 
@@ -660,7 +660,7 @@ header div.section{
                     font-style: normal;
                     font-weight: 700;
                     font-size: 16px;
-                    line-height: 2.25;
+                    line-height: 2.25em;
                     letter-spacing: 0.06em;
                 }
                 
@@ -724,8 +724,8 @@ footer div.section{
 
     .addres-footer ul li{
         margin-bottom: 9px;
-        line-height: 1.7;
-        font-size: 14px; 
+        line-height: 1.7em;
+        font-size: 14px;
     }
 
     .addres-footer ul li a{
@@ -866,7 +866,7 @@ footer div.section{
             display: block;
             margin: 0 auto 30px auto;
             font-size: 20px;
-            line-height: 23px;
+            line-height: 1.150em;
         }
 
         .form-field{
@@ -908,10 +908,10 @@ footer div.section{
             content: "";
             position: absolute;
             width: 100%;
-            bottom: 0;
+            bottom: 0.07em;
             left: 0;
             display: block;
-            height: 1px;
+            height: 0.05em;
             background-color: var(--main-hover-color);
         }
         .form-field .link-terms:hover::after{
