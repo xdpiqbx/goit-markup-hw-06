@@ -688,7 +688,6 @@ footer div.section{
    
     .wrapper-in-footer{
         padding-top: 60px;
-        max-width: var(--max-width);
     }
 
     footer .flex-container{
