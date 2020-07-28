@@ -76,6 +76,7 @@ body{
     font-family: var(--main-font-family);
     color: var(--main-font-color);
     letter-spacing: 0.03em;
+    min-width: var(--max-width);
 }
 
 
@@ -105,13 +106,13 @@ img {
     margin: 0 auto;
     padding-top: 94px;
     padding-bottom: 94px;
-    padding-left: 15px;
-    padding-right: 15px;
 }
 
 .container{
     margin: 0 auto;
     max-width: var(--max-width);
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .in-block-center-position{
