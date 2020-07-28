@@ -245,6 +245,9 @@ header div.section{
 
 /*Main element ===================== index.html ================================================*/
 .hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0 auto;
     height: 600px;
     max-width: 1600px;
@@ -255,10 +258,17 @@ header div.section{
     background-position: center;
 }
 
+    /*
+    или так =)) но у hero убрать display: flex; justify и align
+     .wrapper-for-hero-content{
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    } */
+
     .hero h1{
         margin-top:0;
         margin-bottom: 30px;
-        padding-top: 200px;
         color:var(--main-font-on-dark-fon-color);
         font-family: var(--main-font-family);
         font-style: normal;
@@ -574,7 +584,7 @@ header div.section{
         justify-content: center;
     }
 
-        .ul-portfolio li{
+        .portfolio-item{
             width: 370px;
             border: 1px solid var(--portfolio-card-border-color);
             box-sizing: border-box;
@@ -584,10 +594,10 @@ header div.section{
             overflow: hidden;
         }
         
-        .ul-portfolio li a{
+        .portfolio-item a{
             outline: none;
         }
-            .ul-portfolio li a div{
+            .wrapper-for-img-hover-text{
                 position: relative;
                 overflow: hidden;
                 margin-bottom: 20px;
@@ -615,16 +625,16 @@ header div.section{
             top: 0;
         }
 
-        .ul-portfolio li:hover,
-        .ul-portfolio li:focus-within{
+        .portfolio-item:hover,
+        .portfolio-item:focus-within{
             box-shadow: var(--portfolio-card-shadow);
         }
 
-        .ul-portfolio li:nth-last-child(-n+3){
+        .portfolio-item:nth-last-child(-n+3){
             margin-bottom: 0; /* убрал у троих последних блоков отступ снизу */
         }
         
-        .ul-portfolio li:nth-child(3n){
+        .portfolio-item:nth-child(3n){
             margin-right: 0; /* убрал у каждого третьего блока отступ справа */
         }
         
@@ -635,10 +645,12 @@ header div.section{
                 width: inherit;
             }
             
-                .ul-portfolio li h2,
-                .ul-portfolio li p{
-                    padding-left: 24px;
+                .portfolio-item h2,
+                .portfolio-item p{
                     text-align: left;
+                }
+                .wrapper-for-header-p{
+                    padding-left: 24px;
                 }
                 
                 .ul-portfolio a h2{
@@ -805,7 +817,8 @@ footer div.section{
         height: 581px;
         margin: 0 auto;
         padding: 40px;
-        transform: translateY(50%);
+        top: 50%;
+        transform: translateY(-50%);
         background-color: var(--modal-window-bg-color);
         box-shadow: var(--modal-window-shadow);
         border-radius: 4px;
