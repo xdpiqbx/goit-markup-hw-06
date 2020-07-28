@@ -8,6 +8,7 @@
     --address-footer-a-color: rgba(255, 255, 255, 0.6);
 
     --secondary-bg-color: #F5F4FA;
+    --main-bg-color: #ffffff;
     --member-card-bg-color: #ffffff;
     --what-we-do-card-header-bg-color: rgba(70, 73, 109, 0.8);
     --portfolio-card-hover-bg: rgba(33, 150, 243, 0.9);
@@ -75,6 +76,7 @@ html {
 body{
     font-family: var(--main-font-family);
     color: var(--main-font-color);
+    background-color: var(--main-bg-color);
     letter-spacing: 0.03em;
     min-width: var(--max-width);
 }
