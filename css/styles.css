@@ -66,12 +66,6 @@ html {
     box-sizing: inherit;
 }
 
-*:hover,
-*:focus{
-    transition-duration: var(--transition-duration-time); 
-    transition-timing-function: var(--cubic-hover);
-}
-
 /* body ===================================================================== */
 body{
     font-family: var(--main-font-family);
@@ -212,6 +206,8 @@ header div.section{
     .hover-effect:focus{
         color: var(--main-hover-color);
         fill: var(--main-hover-color);
+        transition-duration: var(--transition-duration-time); 
+        transition-timing-function: var(--cubic-hover);
     }
 
     /*menu underline ==================== */
@@ -261,14 +257,6 @@ header div.section{
     background-position: center;
 }
 
-    /*
-    или так =)) но у hero убрать display: flex; justify и align
-     .wrapper-for-hero-content{
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-    } */
-
     .hero h1{
         margin-top:0;
         margin-bottom: 30px;
@@ -296,6 +284,14 @@ header div.section{
         border: 0;
         border-radius: 4px;
     }
+
+        .hero button:hover,
+        .hero button:focus{
+            background-color: var(--main-bg-color);
+            color: var(--main-font-color);
+            transition-duration: var(--transition-duration-time); 
+            transition-timing-function: var(--cubic-hover);
+        }
 
 .wrapper-full-width{
     background-color: var(--secondary-bg-color);
@@ -354,12 +350,6 @@ header div.section{
         .diagram::before{ background-image: url("../images/benefits-svg/diagram.svg"); }
         .astronaut::before{ background-image: url("../images/benefits-svg/astronaut.svg"); }
 
-/*     .placeholder-for-icon{
-        height: 120px;
-        margin-bottom: 30px;
-        background-color: var(--secondary-bg-color);
-        border-radius: 4px;
-    } */
         .benefits-icon{
             width: 70px;
             height: 70px;
@@ -491,13 +481,17 @@ header div.section{
 
             .social a:hover .link-icon,
             .social a:focus .link-icon{
-                background-color: var(--main-hover-color);
                 fill:var(--main-font-on-dark-fon-color);
+                background-color: var(--main-hover-color);
+                transition-duration: var(--transition-duration-time); 
+                transition-timing-function: var(--cubic-hover);
             }
 
             footer .social .link-icon{
-                background-color:var(--social-links);
                 fill: var(--main-font-on-dark-fon-color);
+                background-color:var(--social-links);
+                transition-duration: var(--transition-duration-time); 
+                transition-timing-function: var(--cubic-hover);
             }
 
 
@@ -539,6 +533,8 @@ header div.section{
     .clients-list li:hover,
     .clients-list li:focus{
         border: 1px solid var(--main-hover-color);
+        transition-duration: var(--transition-duration-time); 
+        transition-timing-function: var(--cubic-hover);
     }
 
     .clients-list a{
@@ -580,6 +576,8 @@ header div.section{
         .btn-group button:focus{
             background-color: var(--main-hover-color);
             color: var(--secondary-bg-color);
+            transition-duration: var(--transition-duration-time); 
+            transition-timing-function: var(--cubic-hover);
         }
 
     .ul-portfolio{
@@ -619,18 +617,20 @@ header div.section{
             line-height: 1.556em;
             top: 100%;
             transition-property: top;
-            transition-duration: var(--transition-duration-time); 
-            transition-timing-function: var(--cubic-hover);
         }
         
         .ul-portfolio a:hover .hover-text,
         .ul-portfolio a:focus .hover-text{
+            transition-duration: var(--transition-duration-time); 
+            transition-timing-function: var(--cubic-hover);
             top: 0;
         }
 
         .portfolio-item:hover,
         .portfolio-item:focus-within{
             box-shadow: var(--portfolio-card-shadow);
+            transition-duration: var(--transition-duration-time); 
+            transition-timing-function: var(--cubic-hover);
         }
 
         .portfolio-item:nth-last-child(-n+3){
@@ -790,6 +790,7 @@ footer div.section{
         letter-spacing: 0.06em;
         font-weight: 600;
     }
+    
         .footer-subscribe-button::after{
             content: "";
             margin-left: 10px;
@@ -861,6 +862,8 @@ footer div.section{
 
             .close-modal:hover,
             .close-modal:focus{
+                transition-duration: var(--transition-duration-time); 
+                transition-timing-function: var(--cubic-hover);
                 fill: var(--main-hover-color);
             }
 
@@ -916,8 +919,11 @@ footer div.section{
             height: 0.05em;
             background-color: var(--main-hover-color);
         }
+
         .form-field .link-terms:hover::after{
             opacity: 0;
+            transition-duration: var(--transition-duration-time); 
+            transition-timing-function: var(--cubic-hover);
         }
 
         .svg-for-input{
