@@ -477,16 +477,14 @@ header div.section{
             width: 44px;
             height: 44px;
             fill: var(--swg-icons-main-color);
+            transition-duration: var(--transition-duration-time); 
+            transition-timing-function: var(--cubic-hover);
         }
 
             .social a:hover .link-icon,
             .social a:focus .link-icon{
                 fill:var(--main-font-on-dark-fon-color);
                 background-color: var(--main-hover-color);
-/*              transition-duration: var(--transition-duration-time); 
-                transition-timing-function: var(--cubic-hover); */
-                transition-duration: 250ms; 
-                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
             }
 
             footer .social .link-icon{
