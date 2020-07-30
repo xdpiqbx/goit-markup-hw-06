@@ -72,7 +72,6 @@ body{
     color: var(--main-font-color);
     background-color: var(--main-bg-color);
     letter-spacing: 0.03em;
-    min-width: var(--max-width);
 }
 
 
@@ -121,6 +120,7 @@ img {
 header{
     color: var(--main-font-color);
     border: 1px solid var(--header-border-color);
+    min-height: 80px;
 }
 
 header div.flex-container{
@@ -176,6 +176,8 @@ header div.section{
             .addres-header a{
                 color: var(--secondary-font-color);
                 fill: var(--secondary-font-color);
+                transition-duration: var(--transition-duration-time);
+                transition-timing-function: var(--cubic-hover);
             }
 
             .contact li:not(:last-child){
@@ -183,11 +185,11 @@ header div.section{
             }
 
             .contact a{
-                min-height: 80px;
+                display: flex;
             }
             
             .address-icon{
-                display: inline-block;
+                display: flex;
                 width: 16px;
                 height: 16px;
             }
@@ -773,34 +775,44 @@ footer div.section{
     #subscribe-email:not(:placeholder-shown) + .footer-subscribe-label{
         opacity: 0;
     }
+    
+    .footer-subscribe .flex-container{
+        justify-content: center;
+        align-items: center;
+    }
 
     .footer-subscribe-label{
         color: var(--secondary-font-color);
     }
 
     .footer-subscribe-button{
+        display: flex;
         width: 200px;
         margin-left: 12px;
         color: var(--main-font-on-dark-fon-color);
+        fill: #ffffff;
         background-color: var(--main-hover-color);
         border: none;
         font-size: 16px;
         letter-spacing: 0.06em;
         font-weight: 600;
+        transition-duration: var(--transition-duration-time); 
+        transition-timing-function: var(--cubic-hover);
     }
-    
-        .footer-subscribe-button::after{
-            content: "";
+          
+        .footer-subscribe-button svg{
             margin-left: 10px;
-            width: 24px;
-            height: 24px;
-            background-image: url(../images/icon-send.svg);
         }
-
-    .footer-subscribe .flex-container{
-        justify-content: center;
-        align-items: center;
+       
+    .footer-subscribe-button:hover,
+    .footer-subscribe-button:focus{
+        fill: var(--main-hover-color);
+        color: var(--main-hover-color);
+        background-color: var(--main-bg-color);
     }
+
+        
+
 /*===================== modal ================================================*/
 .backdrop{
     position: fixed;
