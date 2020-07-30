@@ -206,8 +206,6 @@ header div.section{
     .hover-effect:focus{
         color: var(--main-hover-color);
         fill: var(--main-hover-color);
-        transition-duration: var(--transition-duration-time); 
-        transition-timing-function: var(--cubic-hover);
     }
 
     /*menu underline ==================== */
@@ -227,6 +225,8 @@ header div.section{
         background-color: var(--main-hover-color);
         border-radius: 3px;
         opacity: 0;
+        transition-duration: var(--transition-duration-time);
+        transition-timing-function: var(--cubic-hover);
     }
 
     .active-page::after{
@@ -236,8 +236,6 @@ header div.section{
     .menu-hover-underline:hover::after,
     .menu-hover-underline:focus::after{
         opacity: 1;
-        transition-duration: var(--transition-duration-time);
-        transition-timing-function: var(--cubic-hover);
     }
 
 
@@ -283,14 +281,14 @@ header div.section{
         box-shadow: var(--hero-button-shadow);
         border: 0;
         border-radius: 4px;
+        transition-duration: var(--transition-duration-time); 
+        transition-timing-function: var(--cubic-hover);
     }
 
         .hero button:hover,
         .hero button:focus{
             background-color: var(--main-bg-color);
             color: var(--main-font-color);
-            transition-duration: var(--transition-duration-time); 
-            transition-timing-function: var(--cubic-hover);
         }
 
 .wrapper-full-width{
@@ -521,13 +519,13 @@ header div.section{
     }
         .clients-list li svg{
             fill: var(--swg-icons-main-color);
+            transition-duration: var(--transition-duration-time); 
+            transition-timing-function: var(--cubic-hover);
         }
 
         .clients-list li a:hover svg,
         .clients-list li a:focus svg{
             fill: var(--main-hover-color);
-            transition-duration: var(--transition-duration-time); 
-            transition-timing-function: var(--cubic-hover);
         }
 
     .clients-list li:hover,
@@ -570,14 +568,14 @@ header div.section{
             box-shadow: var(--portfolio-button-shadow);
             border-radius: 4px;
             outline: none;
+            transition-duration: var(--transition-duration-time); 
+            transition-timing-function: var(--cubic-hover);
         }
 
         .btn-group button:hover,
         .btn-group button:focus{
             background-color: var(--main-hover-color);
             color: var(--secondary-bg-color);
-            transition-duration: var(--transition-duration-time); 
-            transition-timing-function: var(--cubic-hover);
         }
 
     .ul-portfolio{
@@ -593,6 +591,8 @@ header div.section{
             margin-bottom: 30px;
             padding-bottom: 20px;
             overflow: hidden;
+            transition-duration: var(--transition-duration-time); 
+            transition-timing-function: var(--cubic-hover);
         }
         
         .portfolio-item a{
@@ -617,20 +617,18 @@ header div.section{
             line-height: 1.556em;
             top: 100%;
             transition-property: top;
+            transition-duration: var(--transition-duration-time); 
+            transition-timing-function: var(--cubic-hover);
         }
         
         .ul-portfolio a:hover .hover-text,
         .ul-portfolio a:focus .hover-text{
-            transition-duration: var(--transition-duration-time); 
-            transition-timing-function: var(--cubic-hover);
             top: 0;
         }
 
         .portfolio-item:hover,
         .portfolio-item:focus-within{
             box-shadow: var(--portfolio-card-shadow);
-            transition-duration: var(--transition-duration-time); 
-            transition-timing-function: var(--cubic-hover);
         }
 
         .portfolio-item:nth-last-child(-n+3){
@@ -858,12 +856,12 @@ footer div.section{
             border-radius: 50%;
             background-color: var(--modal-window-bg-color);
             cursor: pointer;
+            transition-duration: var(--transition-duration-time); 
+            transition-timing-function: var(--cubic-hover);
         }
 
             .close-modal:hover,
             .close-modal:focus{
-                transition-duration: var(--transition-duration-time); 
-                transition-timing-function: var(--cubic-hover);
                 fill: var(--main-hover-color);
             }
 
@@ -918,12 +916,12 @@ footer div.section{
             display: block;
             height: 0.05em;
             background-color: var(--main-hover-color);
+            transition-duration: var(--transition-duration-time); 
+            transition-timing-function: var(--cubic-hover);
         }
 
         .form-field .link-terms:hover::after{
             opacity: 0;
-            transition-duration: var(--transition-duration-time); 
-            transition-timing-function: var(--cubic-hover);
         }
 
         .svg-for-input{
@@ -945,6 +943,7 @@ footer div.section{
             position: absolute;
             top: 13px;
             left: 42px;
+            transition-duration: var(--transition-duration-time);
         }
 
         
@@ -952,7 +951,6 @@ footer div.section{
         .modal-input:not(:placeholder-shown) + .modal-label{
             top:-18px;
             left:16px;
-            transition-duration: var(--transition-duration-time);
             color: var(--main-hover-color);
         }
 
