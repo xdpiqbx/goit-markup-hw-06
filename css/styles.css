@@ -769,6 +769,8 @@ footer div.section{
                     left: 16px;
                     top: 50%;
                     transform: translateY(-50%);
+                    transition-duration: var(--transition-duration-time);
+                    transition-timing-function: var(--cubic-hover);
                 }
 
     #subscribe-email:focus + .footer-subscribe-label,
