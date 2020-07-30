@@ -483,15 +483,17 @@ header div.section{
             .social a:focus .link-icon{
                 fill:var(--main-font-on-dark-fon-color);
                 background-color: var(--main-hover-color);
-                transition-duration: var(--transition-duration-time); 
-                transition-timing-function: var(--cubic-hover);
+/*              transition-duration: var(--transition-duration-time); 
+                transition-timing-function: var(--cubic-hover); */
+                transition-duration: 250ms; 
+                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
             }
 
             footer .social .link-icon{
                 fill: var(--main-font-on-dark-fon-color);
                 background-color:var(--social-links);
-                transition-duration: var(--transition-duration-time); 
-                transition-timing-function: var(--cubic-hover);
+                transition-duration: 250ms; 
+                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
             }
 
 
